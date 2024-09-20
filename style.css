@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* _______START NORMALIZE________ */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Remove underlines from links */
+a {
+    text-decoration: none;
+}
+/* ___________END NORMALIZE___________ */
+
+/* BASIC STYLES  */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    padding: 50px 0;
+}
+
+.l-wrapper {
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: 0 auto;
+    width: 100%;
+}
+#calendar {
+    display: flex;
+}
+#time {
+    width: 60px; /* Ширина для временных интервалов */
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+#days {
+    display: flex;
+    flex: 1;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+.day {
+    flex: 1;
+    border-left: 1px solid #ddd;
+    position: relative;
+    min-height: 600px; /* Задайте минимальную высоту по вашему усмотрению */
+}
+.event {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+/* 
+#calendar {
+    display: flex;
+}
+.day {
+    flex: 1;
+    border: 1px solid #ddd;
+    position: relative;
+}
+.event {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+} */
+
+/* 
+.l-schedule {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 100px;
+    gap: 10px;
+    margin: 20px;
+}
+ */
+
+/* .l-time-column,
+.l-day-column {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+} */
+/* 
+.l-time,
+.l-day {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+} */
+/* 
+.l-day {
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+/* .l-day:hover {
+    background-color: #d0d0d0;
+} */

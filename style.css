@@ -59,13 +59,19 @@ body {
     margin: 0 auto;
     width: 100%;
 }
+.l-schedule__container {
+    /* width: 100%; */
+    /* overflow: hidden; */
+    overflow-x: auto;
+}
 .l-schedule {
     display: flex;
     position: relative;
-    gap: 10px;
+    /* gap: 10px; */
     overflow: hidden;
     padding-top: 40px;
-    min-width: 768px;
+    min-width: 1200px;
+    /* overflow-x: scroll; */
 }
 
 .l-times-block .l-time {
@@ -78,14 +84,23 @@ body {
     top: 0;
     left: 0;
 }
+.l-times-block {
+    padding-right: 10px;
+    background-color: white;
+}
+.l-time {
+    background-color: white;
+    z-index: 2;
+}
 .l-time::after {
     content: "";
     border-bottom: 1px solid #ddd;
     position: absolute;
     width: 100%;
-    left: 51px;
+    left: 0;
     margin-top: 12px;
     pointer-events: none;
+    z-index: -1;
 }
 
 .l-days {
@@ -112,7 +127,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    background-color: rgb(247, 111, 0);;
+    background-color: rgb(247, 111, 0);
     /* border: 1px solid #ccc; */
     overflow: hidden;
     padding: 4px;

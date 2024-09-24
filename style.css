@@ -59,11 +59,13 @@ body {
     margin: 0 auto;
     width: 100%;
 }
+
 .l-schedule__container {
     /* width: 100%; */
     /* overflow: hidden; */
     overflow-x: auto;
 }
+
 .l-schedule {
     display: flex;
     position: relative;
@@ -77,6 +79,7 @@ body {
 .l-times-block .l-time {
     height: 30px;
 }
+
 .l-times__lines {
     position: absolute;
     min-width: 100%;
@@ -84,14 +87,17 @@ body {
     top: 0;
     left: 0;
 }
+
 .l-times-block {
     padding-right: 10px;
     background-color: white;
 }
+
 .l-time {
     background-color: white;
     z-index: 2;
 }
+
 .l-time::after {
     content: "";
     border-bottom: 1px solid #ddd;
@@ -111,18 +117,22 @@ body {
     /* border-bottom: 1px solid #ddd; */
     position: relative;
 }
+
 .day {
     flex: 1;
     border-right: 1px solid #ddd;
     position: relative;
     min-height: 600px; /* Задайте минимальную высоту по вашему усмотрению */
+    margin-top: 13px;
 }
+
 .day .day-title {
     position: absolute;
     top: -30px;
     text-align: center;
     width: 100%;
 }
+
 .l-event {
     position: absolute;
     left: 0;
@@ -138,4 +148,72 @@ body {
     font-weight: bold;
     display: flex;
     line-height: normal;
+}
+
+.day .slot {
+    height: 30px;
+}
+
+.day .slot span {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.day .slot:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.day .slot:hover span {
+    display: flex;
+}
+
+.l-event:hover {
+    cursor: not-allowed;
+    /* pointer-events: none; */
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
